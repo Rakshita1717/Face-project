@@ -1,71 +1,42 @@
-# Face Recognition Demo using DeepFace and OpenCV
+# Face Recognition Demo with DeepFace
 
-## Overview
-
-This project is a simple AI-based Face Recognition and Face Detection system developed using Python, DeepFace, OpenCV, and TensorFlow. The project demonstrates how Artificial Intelligence, Deep Learning, and Computer Vision techniques can be used to detect, compare, and verify human faces from images.
-
-The project is designed especially for beginners who want to understand the basics of face recognition technology and how modern AI models work in real-world applications. It provides a simple implementation of face verification and face detection using pre-trained deep learning models.
-
----
+This is a simple demo script for face recognition using the DeepFace library.
 
 ## Features
 
-### 1. Face Verification
-- Compares two face images.
-- Checks whether both images belong to the same person.
-- Returns verification result (`True` or `False`).
-- Displays similarity distance and threshold values.
+- Face verification: Check if two faces belong to the same person
+- Face detection: Detect faces in an image
 
-### 2. Face Detection
-- Detects human faces from an image.
-- Returns facial area coordinates.
-- Uses DeepFace and OpenCV for accurate detection.
+## Requirements
 
-### 3. Beginner Friendly
-- Simple and easy-to-understand Python code.
-- Clean project structure.
-- Easy setup and installation process.
-
----
-
-## Technologies Used
-
-- Python
-- DeepFace
+- Python 3.7+
+- DeepFace library
 - OpenCV
-- TensorFlow
-- tf-keras
-- Computer Vision
-- Deep Learning
 
----
+Install dependencies:
+```
+pip install -r requirements.txt
+```
 
-## How It Works
+## Usage
 
-The project uses DeepFace, which internally applies deep learning models such as:
-- Facenet
-- ArcFace
-- VGG-Face
+Run the script:
+```
+python face.py
+```
 
-The workflow of the project is:
+Choose the demo option:
+1. Face Verification
+2. Face Detection
 
-1. Read input image
-2. Detect human face
-3. Extract facial features (embeddings)
-4. Compare facial embeddings
-5. Return verification result
+## Troubleshooting
 
-Face detection is performed using computer vision techniques, while face verification uses neural network-based deep learning models.
+- If you get import errors, ensure DeepFace is installed: `pip install deepface`
+- For face verification, the script uses sample images from URLs. Replace with your own image paths if needed.
+- DeepFace requires internet connection for downloading models on first run.
+- If camera is not working (in original code), ensure OpenCV can access your webcam.
 
----
+## Notes
 
-## Project Structure
-
-```text
-face_project/
-│
-├── face.py
-├── requirements.txt
-├── README.md
-├── img1.jpg
-├── img2.jpg
+- Face verification uses a threshold to determine if faces match.
+- The demo uses public domain images for demonstration purposes.
